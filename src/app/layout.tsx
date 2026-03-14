@@ -14,14 +14,14 @@ const RootLayout = ({ children }: Readonly<RootLayoutProps>) => {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       suppressHydrationWarning>
-      <body className="bg-[url(/white-bg.jpg)] bg-cover bg-center bg-no-repeat dark:bg-[url(/dark-bg.jpg)]">
+      <body className="dark:bg-[url(/ dark-bg.jpg)] bg-[url(/white-bg.jpg)] bg-cover bg-center bg-no-repeat">
         <ThemeProvider
           attribute={"class"}
           defaultTheme="dark"
           enableSystem={false}>
           <Header />
 
-          <main className="mx-auto max-w-7xl px-6 py-3">{children}</main>
+          <main className="mx-auto max-w-7xl px-6">{children}</main>
         </ThemeProvider>
       </body>
     </html>
